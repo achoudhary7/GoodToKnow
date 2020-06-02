@@ -1,0 +1,27 @@
+Here are a few tips and tricks that will make it easier for you to edit files with nano.
+
+• Delete lines: To delete a line, move to beginning of line, then press Ctrl-k (hold down the CTRL key, and
+  press the K key). The “K” is for “Kut”.
+  
+• Cutting and Pasting: First, move to the beginning of the text you want to cut and press Ctrl-6. 
+  Then move to end of the text you want and press Ctrl-K. This will “Kut” the text. Now move to the place where you want 
+  to insert the text and press Ctrl-U (for “Uncut”). Your text will be inserted here. If you want to paste the same text 
+  in another location, move there and press Ctrl-U again. You can do this as many times as you want.
+  
+• Search: To search for text, press Ctrl-W (for “Where is...”). You’ll be asked what to search for. Enter it, 
+  then press the Enter or Return key. The cursor will jump forward to the first occurrance of the text you’re searching for.
+  If there are no matches, you’ll see a message at the bottom telling you that the thing you searched for wasn’t found. 
+  To search for the same thing again, press Crtl-W again.
+  
+• Find and Replace: Press Alt-R (hold down the ALT key and press the R key). You’ll be asked what to search for. 
+  Enter it, then press the Enter or Return key. You’ll be asked for replacement text. Enter this, and press Return again.
+  Finally, you’ll be asked whether you want to replace just the first occurrence, or all occurrences.
+  
+• Saving Your Work Without Exiting nano: To save your work at any time, press Ctrl-O (that’s the letter O, not a zero).
+• Displaying the Current Line Number: nano can optionally display the current line number (the number of 
+  the line where the cursor currently is). This can be useful when g++ give you an error message like:
+  hello.cpp:3:27: error: 'prantf' was not declared in this scope
+  
+  In the example above, g++ is telling us that our program has an error on line 3. (It also tells us that g++ thinks the error was around character number 27 on that line, but this number is often unreliable.) You can ask nano to temporarily turn on line numbers by pressing Alt-C (meaning “Hold down the Alt key and the C key simultaneously”). This will show line and column numbers near the bottom of nano’s window. If you like, you can make nano always display line and column numbers by using nano to create a file named /.nanorc and putting the following line into that file:
+  set const
+  The next time you start nano it should automatically display the line number at the bottom of the window.
