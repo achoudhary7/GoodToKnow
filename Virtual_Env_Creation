@@ -1,0 +1,61 @@
+Virtual environments can be described as isolated installation directories. 
+This isolation allows you to localized the installation of your project’s dependencies, 
+without forcing you to install them system-wide.
+
+Benefits:
+
+You can have multiple environments, with multiple sets of packages, without conflicts among them. This way, different projects’ requirements can be satisfied at the same time.
+You can easily release your project with its own dependent modules.
+
+Here are two ways you can create Python virtual environments.
+
+Way 1 
+
+Step 1 - Installing the tool to create Virtual environment : virtualenv
+
+  ==> virtualenv is a tool used to create isolated Python environments. It creates a folder which contains all the necessary    
+  executables to use the packages that a Python project would need.
+
+  ==> You can install it with pip:
+      pip install virtualenv
+     
+  ==> Verify the installation with the following command:
+      virtualenv --version
+
+Step 2 - Create an Environment
+
+  virtualenv --no-site-packages my-env
+  
+  This creates a folder in the current directory with the name of the environment (my-env/). This folder contains the 
+  directories for installing modules and Python executables.
+
+  You can also specify the Python version you want to work with. Just use the argument --python=/path/to/python/version. For 
+  instance, python2.7:
+  virtualenv --python=/usr/bin/python2.7 my-env
+  
+Step 3 - List Environments
+  You can list the available environments with:
+  lsvirtualenv
+  
+Step 4 - Activate an Environment
+  source my-env/bin/activate
+  
+Way 2 - You can install packages one by one, or by setting a requirements.txt file for your project.
+  pip install some-package
+  pip install -r requirements.txt
+  
+  If you want to create a requirements.txt file from the already installed packages, run the following command:
+    pip freeze > requirements.txt
+    The file will contain the list of all the packages installed in the current environment, and their respective versions.     
+    This will help you release your project with its own dependent modules.
+    
+Deactivate an Environment
+  If you are done working with the virtual environment you can deactivate it with:
+  deactivate
+  
+Delete an Environment
+Simply delete the environment folder.
+
+
+
+
